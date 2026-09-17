@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Confirmed - Nkomazi Urban Wear</title><link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet"></head><body>
+<nav class="navbar"><div class="logo">NKOMAZI<span> URBAN</span></div><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="shop.html">Shop</a></li></ul><div class="nav-actions"><a href="cart.html" class="cart-btn"><span class="cart-icon">🛒</span><span>CART</span><span class="cart-badge" id="cartCount">0</span></a></div></nav>
+<section class="confirmation">
+  <div class="confirm-card">
+    <div class="check-icon">✓</div>
+    <h1>PAYMENT CONFIRMED</h1>
+    <p id="thankYouMsg">Thank you for your order!</p>
+    <div class="order-details">
+      <p><strong>Order ID:</strong> <span id="orderId">NK-00000</span></p>
+      <p><strong>Date:</strong> <span id="orderDate"></span></p>
+      <p><strong>Customer:</strong> <span id="confName"></span></p>
+      <p><strong>Email:</strong> <span id="confEmail"></span></p>
+      <p><strong>Payment:</strong> <span id="confPay"></span></p>
+      <div style="margin-top:20px;text-align:left;background:#111;padding:15px;border:1px solid #222">
+        <h4>Items Ordered:</h4><div id="confItems"></div>
+        <hr style="margin:10px 0;border-color:#222">
+        <div style="display:flex;justify-content:space-between;font-weight:800"><span>Total Paid:</span><span id="confTotal"></span></div>
+      </div>
+    </div>
+    <div style="margin-top:24px;display:flex;gap:10px;justify-content:center">
+      <a href="shop.html" class="btn btn-white">Continue Shopping</a>
+      <a href="index.html" class="btn btn-outline">Home</a>
+    </div>
+  </div>
+</section>
+<script src="main.js"></script>
+<script>
+const order = JSON.parse(localStorage.getItem('lastOrder')||'{}');
+if(order.items){
+  document.getElementById('orderId').textContent=order.id;
+  document.getElementById('orderDate').textContent=order.date;
+  document.getElementById('confName').textContent=order.name;
+  document.getElementById('confEmail').textContent=order.email;
+  document.getElementById('confPay').textContent=order.payMethod;
+  document.getElementById('confTotal').textContent=order.total;
+  document.getElementById('confItems').innerHTML=order.items.map(i=>`<div style="display:flex;justify-content:space-between;margin:4px 0"><span>${i.name} (${i.size}) x${i.qty}</span><span>R${(i.price*i.qty).toFixed(2)}</span></div>`).join('');
+  document.getElementById('thankYouMsg').textContent=`Thank you ${order.name}, your order is confirmed!`;
+}
+</script>
+</body></html>

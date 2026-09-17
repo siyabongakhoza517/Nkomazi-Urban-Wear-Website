@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cart & Checkout - Nkomazi Urban Wear</title><link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet"></head><body>
+<nav class="navbar"><div class="logo">NKOMAZI<span> URBAN</span></div>
+<ul class="nav-links" id="navLinks"><li><a href="index.html">Home</a></li><li><a href="shop.html">Shop</a></li><li><a href="about.html">About</a></li><li><a href="gallery.html">Lookbook</a></li><li><a href="contact.html">Contact</a></li></ul>
+<div class="nav-actions"><a href="cart.html" class="cart-btn"><span class="cart-icon">🛒</span><span>CART</span><span class="cart-badge" id="cartCount">0</span></a><span class="hamburger" onclick="toggleMenu()">☰</span></div></nav>
+<section class="page-header"><h1>YOUR CART</h1><p>Review quantity then checkout</p></section>
+<section class="section"><div class="checkout-grid">
+<div class="cart-items-box"><div id="cartList"></div><div id="emptyCart" class="empty-msg">Your cart is empty. <a href="shop.html">Go to Shop</a></div></div>
+<div class="checkout-box">
+  <h3>Order Summary</h3>
+  <div class="summary-row"><span>Subtotal</span><span id="subtotal">R0.00</span></div>
+  <div class="summary-row"><span>Delivery</span><span id="delivery">R80.00</span></div>
+  <div class="summary-row total"><span>Total</span><span id="total">R0.00</span></div>
+  <p id="freeDeliveryMsg" style="color:#00ff88;font-size:12px;margin:10px 0"></p>
+  <h4 style="margin-top:20px">Delivery Details</h4>
+  <form id="checkoutForm">
+    <input type="text" id="custName" placeholder="Full Name *" required>
+    <input type="email" id="custEmail" placeholder="Email *" required>
+    <input type="tel" id="custPhone" placeholder="Phone *" required>
+    <input type="text" id="custAddress" placeholder="Delivery Address *" required>
+    <select id="payMethod" required><option value="">Payment Method *</option><option>Card - Visa/Mastercard</option><option>PayFast</option><option>Cash on Delivery</option><option>EFT</option></select>
+    <button type="submit" class="btn btn-red full">PAY NOW & CONFIRM</button><p id="checkoutMsg"></p>
+  </form>
+</div></div></section>
+<footer>© 2026 Nkomazi Urban Wear</footer>
+<script src="main.js"></script>
+<script>document.addEventListener('DOMContentLoaded', renderCartPage);</script>
+</body></html>
