@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Lookbook - Nkomazi Urban Wear</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+/* FIXED GRID FOR 6 LOOKS - makes images fit like your screenshot */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.g-item {
+  position: relative;
+  height: 380px;
+  background: #111;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.g-item.red { background: #c00; }
+.g-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fixes stretched look */
+  display: block;
+}
+.g-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.25);
+  color: white;
+  font-family: 'Anton', sans-serif;
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.1;
+}
+@media (max-width: 768px) {
+  .gallery-grid { grid-template-columns: 1fr 1fr; }
+  .g-item { height: 260px; }
+}
+</style>
+</head>
+<body>
+<nav class="navbar"><div class="logo">NKOMAZI<span> URBAN</span></div>
+<ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="gallery.html" class="active">Lookbook</a></li>
+    <li><a href="contact.html">Contact</a></li>
+</ul>
+<div class="nav-actions">
+    <a href="cart.html" class="cart-btn">
+        <span class="cart-icon">🛒</span>
+        <span>CART</span>
+        <span class="cart-badge" id="cartCount">0</span>
+    </a><span class="hamburger" onclick="toggleMenu()">☰</span>
+</div>
+</nav>
+
+<section class="page-header">
+    <h1>LOOKBOOK 2026</h1>
+    <p>How our community styles it</p>
+</section>
+
+<section class="section dark">
+<div class="gallery-grid">
+
+    <!-- LOOK 01 HOODIE FIT -->
+    <div class="g-item">
+      <!-- IMAGE PATH FOR LOOK 01 - CHANGE HERE -->
+      <img src="images/look-01-hoodie.jpeg" alt="Look 01 Hoodie Fit">
+      <!-- Example: <img src="images/YOUR-FILE-NAME.jpg"> -->
+      <div class="g-overlay">LOOK 01<br>HOODIE FIT</div>
+    </div>
+
+    <!-- LOOK 02 RED TEE -->
+    <div class="g-item red">
+      <!-- IMAGE PATH FOR LOOK 02 - CHANGE HERE -->
+      <img src="images/look-02-red-tee.jpeg" alt="Look 02 Red Tee">
+      <div class="g-overlay">LOOK 02<br>RED TEE</div>
+    </div>
+
+    <!-- LOOK 03 PUFFER -->
+    <div class="g-item">
+      <!-- IMAGE PATH FOR LOOK 03 - CHANGE HERE -->
+      <img src="images/look-03-puffer.jpeg" alt="Look 03 Puffer">
+      <div class="g-overlay">LOOK 03<br>PUFFER</div>
+    </div>
+
+    <!-- LOOK 04 CAP STYLE -->
+    <div class="g-item">
+      <!-- IMAGE PATH FOR LOOK 04 - CHANGE HERE -->
+      <img src="images/look-04-cap.jpeg" alt="Look 04 Cap Style">
+      <div class="g-overlay">LOOK 04<br>CAP STYLE</div>
+    </div>
+
+    <!-- LOOK 05 STREET -->
+    <div class="g-item red">
+      <!-- IMAGE PATH FOR LOOK 05 - CHANGE HERE -->
+      <img src="images/look-05-street.jpeg" alt="Look 05 Street">
+      <div class="g-overlay">LOOK 05<br>STREET</div>
+    </div>
+
+    <!-- LOOK 06 BAGGY JEANS -->
+    <div class="g-item">
+      <!-- IMAGE PATH FOR LOOK 06 - CHANGE HERE -->
+      <img src="images/look-06-baggy.jpeg" alt="Look 06 Baggy Jeans">
+      <div class="g-overlay">LOOK 06<br>BAGGY JEANS</div>
+    </div>
+
+</div>
+</section>
+
+<footer>© 2026 Nkomazi Urban Wear</footer>
+<script src="main.js"></script>
+</body>
+</html>

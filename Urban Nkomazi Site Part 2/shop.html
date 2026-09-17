@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Collection - Nkomazi Urban Wear | T-Shirts, Hoodies, Jeans, Caps</title>
+  <meta name="description" content="Shop Nkomazi Urban Wear official collection. T-Shirts from R229, Hoodies from R499, Jackets, Caps, Jeans. Size S-XXL. Delivery from Nkomazi, MP.">
+  <meta property="og:title" content="Shop - Nkomazi Urban Wear">
+  <meta property="og:description" content="Streetwear from Nkomazi. Choose size & quantity.">
+  <meta property="og:image" content="images/classic-white-tee.jpg">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>.p-img img{width:100%; height:100%; object-fit:cover; border-radius:8px;}</style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="logo">NKOMAZI<span> URBAN</span></div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shop.html" class="active">Shop</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="gallery.html">Lookbook</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="cart.html" class="cart-btn"><span class="cart-icon">🛒</span><span>CART</span><span class="cart-badge" id="cartCount">0</span></a>
+    <span class="hamburger" onclick="toggleMenu()">☰</span>
+  </div>
+</nav>
+
+<section class="page-header">
+  <h1>SHOP COLLECTION</h1>
+  <p>Choose category • Select size & quantity</p>
+  <div class="filters">
+    <button class="filter-btn active" onclick="filterCategory('all')">All</button>
+    <button class="filter-btn" onclick="filterCategory('tshirts')">T-Shirts</button>
+    <button class="filter-btn" onclick="filterCategory('hoodies')">Hoodies</button>
+    <button class="filter-btn" onclick="filterCategory('jackets')">Jacket</button>
+    <button class="filter-btn" onclick="filterCategory('caps')">Caps</button>
+    <button class="filter-btn" onclick="filterCategory('jeans')">Jeans</button>
+  </div>
+</section>
+
+<!-- T-SHIRTS -->
+<section id="tshirts" class="category-section">
+  <div class="cat-head"><h2>T-SHIRTS</h2><span>S-XXL</span></div>
+  <div class="product-grid">
+    <div class="product"><div class="p-img"><img src="images/white tee.jpg" alt="Classic White Tee"></div><div class="p-info"><h3>Classic White Tee</h3><p>R229.99</p><select class="size-select"><option>S</option><option selected>M</option><option>L</option><option>XL</option><option>XXL</option></select><div class="qty-input-row"><label>Qty:</label><div class="qty-box"><button onclick="changeShopQty(this,-1)">-</button><input class="qty-input" value="1" readonly><button onclick="changeShopQty(this,1)">+</button></div></div><button class="btn btn-small" onclick="addToCart('Classic White Tee',229.99,this)">Add to Cart</button></div></div>
+    <div class="product"><div class="p-img"><img src="images/black tee 2.jpeg" alt="Nkomazi Red Logo Tee"></div><div class="p-info"><h3>Nkomazi Red Logo Tee</h3><p>R249.99</p><select class="size-select"><option>S</option><option selected>M</option><option>L</option><option>XL</option></select><div class="qty-input-row"><label>Qty:</label><div class="qty-box"><button onclick="changeShopQty(this,-1)">-</button><input class="qty-input" value="1" readonly><button onclick="changeShopQty(this,1)">+</button></div></div><button class="btn btn-small" onclick="addToCart('Nkomazi Red Logo Tee',249.99,this)">Add to Cart</button></div></div>
+    <div class="product"><div class="p-img"><img src="images/black tee 1.jpeg" alt="Street Culture Tee"></div><div class="p-info"><h3>Street Culture Tee</h3><p>R269.99</p><select class="size-select"><option>S</option><option selected>M</option><option>L</option><option>XL</option></select><div class="qty-input-row"><label>Qty:</label><div class="qty-box"><button onclick="changeShopQty(this,-1)">-</button><input class="qty-input" value="1" readonly><button onclick="changeShopQty(this,1)">+</button></div></div><button class="btn btn-small" onclick="addToCart('Street Culture Tee',269.99,this)">Add to Cart</button></div></div>
+  </div>
+</section>
+
+<!-- HOODIES -->
+<section id="hoodies" class="category-section dark">
+  <div class="cat-head"><h2>HOODIES</h2><span>Warm fleece</span></div>
+  <div class="product-grid">
+    <div class="product"><div class="p-img"><img src="images/black hoodie.jpeg" alt="Nkomazi Black Hoodie"></div><div class="p-info"><h3>Essential Black Hoodie</h3><p>R499.99</p><select class="size-select"><option selected>M</option><option>L</option><option>XL</option><option>XXL</option></select><div class="qty-input-row"><label>Qty:</label><div class="qty-box"><button onclick="changeShopQty(this,-1)">-</button><input class="qty-input" value="1" readonly><button onclick="changeShopQty(this,1)">+</button></div></div><button class="btn btn-small" onclick="addToCart('Essential Black Hoodie',499.99,this)">Add to Cart</button></div></div>
+    <div class="product"><div class="p-img"><img src="images/red hoodie.jpeg" alt="Nkomazi Red Hoodie"></div><div class="p-info"><h3>Nkomazi Red Hoodie</h3><p>R549.99</p><select class="size-select"><option selected>M</option><option>L</option><option>XL</option></select><div class="qty-input-row"><label>Qty:</label><div class="qty-box"><button onclick="changeShopQty(this,-1)">-</button><input class="qty-input" value="1" readonly><button onclick="changeShopQty(this,1)">+</button></div></div><button class="btn btn-small" onclick="addToCart('Nkomazi Red Hoodie',549.99,this)">Add to Cart</button></div></div>
+  </div>
+</section>
+
+<!-- JACKETS -->
+<section id="jackets" class="category-section">
+  <div class="cat-head"><h2>JACKETS</h2><span>Puffer</span></div>
+  <div class="product-grid">
+    <div class="product"><div class="p-img"><img src="images/puff jacket.jpeg" alt="Urban Puffer Jacket"></div><div class="p-info"><h3>Urban Puffer Jacket</h3><p>R899.99</p><select class="size-select"><option selected>M</option><option>L</option><option>XL</option></select><div class="qty-input-row"><label>Qty:</label><div class="qty-box"><button onclick="changeShopQty(this,-1)">-</button><input class="qty-input" value="1" readonly><button onclick="changeShopQty(this,1)">+</button></div></div><button class="btn btn-small" onclick="addToCart('Urban Puffer Jacket',899.99,this)">Add to Cart</button></div></div>
+    <div class="product"><div class="p-img"><img src="images/red jacket.jpg" alt="Windbreaker Track Jacket"></div><div class="p-info"><h3>Windbreaker Track Jacket</h3><p>R699.99</p><select class="size-select"><option selected>M</option><option>L</option><option>XL</option></select><div class="qty-input-row"><label>Qty:</label><div class="qty-box"><button onclick="changeShopQty(this,-1)">-</button><input class="qty-input" value="1" readonly><button onclick="changeShopQty(this,1)">+</button></div></div><button class="btn btn-small" onclick="addToCart('Windbreaker Track Jacket',699.99,this)">Add to Cart</button></div></div>
+  </div>
+</section>
+
+<!-- CAPS -->
+<section id="caps" class="category-section dark">
+  <div class="cat-head"><h2>CAPS</h2><span>One Size</span></div>
+  <div class="product-grid">
+    <div class="product"><div class="p-img"><img src="images/cap.jpg" alt="Street Snapback"></div><div class="p-info"><h3>Street Snapback</h3><p>R199.99</p><select class="size-select"><option>One Size</option></select><div class="qty-input-row"><label>Qty:</label><div class="qty-box"><button onclick="changeShopQty(this,-1)">-</button><input class="qty-input" value="1" readonly><button onclick="changeShopQty(this,1)">+</button></div></div><button class="btn btn-small" onclick="addToCart('Street Snapback',199.99,this)">Add to Cart</button></div></div>
+    <div class="product"><div class="p-img"><img src="images/beanie.jpg" alt="Nkomazi Beanie"></div><div class="p-info"><h3>Nkomazi Beanie</h3><p>R149.99</p><select class="size-select"><option>One Size</option></select><div class="qty-input-row"><label>Qty:</label><div class="qty-box"><button onclick="changeShopQty(this,-1)">-</button><input class="qty-input" value="1" readonly><button onclick="changeShopQty(this,1)">+</button></div></div><button class="btn btn-small" onclick="addToCart('Nkomazi Beanie',149.99,this)">Add to Cart</button></div></div>
+  </div>
+</section>
+
+<!-- JEANS -->
+<section id="jeans" class="category-section">
+  <div class="cat-head"><h2>JEANS</h2><span>Denim</span></div>
+  <div class="product-grid">
+    <div class="product"><div class="p-img"><img src="images/baggy jeans.jpg" alt="Distressed Baggy Jeans"></div><div class="p-info"><h3>Distressed Baggy Jeans</h3><p>R599.99</p><select class="size-select"><option>30</option><option>32</option><option selected>34</option><option>36</option></select><div class="qty-input-row"><label>Qty:</label><div class="qty-box"><button onclick="changeShopQty(this,-1)">-</button><input class="qty-input" value="1" readonly><button onclick="changeShopQty(this,1)">+</button></div></div><button class="btn btn-small" onclick="addToCart('Distressed Baggy Jeans',599.99,this)">Add to Cart</button></div></div>
+    <div class="product"><div class="p-img"><img src="images/skinny jean.jpg" alt="Slim Street Jeans"></div><div class="p-info"><h3>Slim Street Jeans</h3><p>R549.99</p><select class="size-select"><option>30</option><option selected>32</option><option>34</option></select><div class="qty-input-row"><label>Qty:</label><div class="qty-box"><button onclick="changeShopQty(this,-1)">-</button><input class="qty-input" value="1" readonly><button onclick="changeShopQty(this,1)">+</button></div></div><button class="btn btn-small" onclick="addToCart('Slim Street Jeans',549.99,this)">Add to Cart</button></div></div>
+  </div>
+</section>
+
+<footer><div>© 2026 Nkomazi Urban Wear</div><div><a href="cart.html" class="btn btn-white">Proceed to Checkout →</a></div></footer>
+<script src="main.js"></script>
+</body>
+</html>

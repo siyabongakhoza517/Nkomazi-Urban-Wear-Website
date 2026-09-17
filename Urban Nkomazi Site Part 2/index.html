@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nkomazi Urban Wear - Wear The Culture</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar">
+  <img src="images/logo.jpeg" width="30%" length="30%"> 
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="gallery.html">Lookbook</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="cart.html" class="cart-btn"><span class="cart-icon">🛒</span><span>CART</span><span class="cart-badge" id="cartCount">0</span></a>
+    <span class="hamburger" onclick="toggleMenu()">☰</span>
+  </div>
+</nav>
+
+<section class="hero">
+  <div>
+    <span class="badge">NEW DROP SS 2026</span>
+    <h1>WEAR THE<br><span class="red">CULTURE.</span></h1>
+    <p>Modern, affordable streetwear for the youth of Mzansi. T-shirts, hoodies, jackets, caps, jeans and more.</p>
+    <div class="btn-group">
+      <a href="shop.html" class="btn btn-white">Explore Collection</a>
+      <a href="about.html" class="btn btn-outline">Our Story</a>
+    </div>
+  </div>
+  <!-- HERO VISUAL - REPLACED TEXT LIST WITH IMAGES -->
+ <div class="visual-card">
+  <div class="drop-title">NKOMAZI DROP</div>
+  <div class="visual-body">
+    <!-- 5 PICTURES - PUT YOUR IMAGE PATHS HERE -->
+    <div class="drop-item">
+      <!-- HOODIE - change filename here -->
+      <img src="images/black hoodie.jpeg" alt="Hoodie">
+      <span>HOODIE</span>
+    </div>
+    <div class="drop-item">
+      <!-- TEE - change filename here -->
+      <img src="images/black tee 2.jpeg" alt="Tee">
+      <span>TEE</span>
+    </div>
+    <div class="drop-item">
+      <!-- JACKET - change filename here -->
+      <img src="images/puff jacket.jpeg" alt="Jacket">
+      <span>JACKET</span>
+    </div>
+    <div class="drop-item">
+      <!-- CAP - change filename here -->
+      <img src="images/cap.jpg" alt="Cap">
+      <span>CAP</span>
+    </div>
+    <div class="drop-item">
+      <!-- JEANS - change filename here -->
+      <img src="images/baggy jeans.jpg" alt="Jeans">
+      <span>JEANS</span>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="section dark">
+  <div class="section-head"><h2>FEATURED COLLECTION</h2><a href="shop.html">View All →</a></div>
+  <div class="product-grid">
+    
+    <!-- 1. ESSENTIAL BLACK HOODIE -->
+    <div class="product">
+      <div class="p-img">
+        <!-- IMAGE PATH FOR HOODIE - CHANGE HERE -->
+        <!-- Save your image in /images/ folder and put the name here -->
+        <img src="images/black hoodie.jpeg" alt="Essential Black Hoodie">
+        <!-- Example: <img src="images/YOUR-HOODIE-FILENAME.jpg" alt="Essential Black Hoodie"> -->
+      </div>
+      <div class="p-info"><h3>Essential Black Hoodie</h3><p>R499.99</p></div>
+    </div>
+
+    <!-- 2. NKOMAZI RED LOGO TEE -->
+    <div class="product">
+      <div class="p-img red">
+        <!-- IMAGE PATH FOR TEE - CHANGE HERE -->
+        <img src="images/black tee 2.jpeg" alt="Nkomazi Red Logo Tee">
+        <!-- Example: <img src="images/YOUR-TEE-FILENAME.jpg" alt="Nkomazi Red Logo Tee"> -->
+      </div>
+      <div class="p-info"><h3>Nkomazi Red Logo Tee</h3><p>R249.99</p></div>
+    </div>
+
+    <!-- 3. URBAN PUFFER JACKET -->
+    <div class="product">
+      <div class="p-img">
+        <!-- IMAGE PATH FOR JACKET - CHANGE HERE -->
+        <img src="images/puff jacket.jpeg" alt="Urban Puffer Jacket">
+        <!-- Example: <img src="images/YOUR-JACKET-FILENAME.jpg" alt="Urban Puffer Jacket"> -->
+      </div>
+      <div class="p-info"><h3>Urban Puffer Jacket</h3><p>R899.99</p></div>
+    </div>
+
+    <!-- 4. STREET SNAPBACK CAP -->
+    <div class="product">
+      <div class="p-img">
+        <!-- IMAGE PATH FOR CAP - CHANGE HERE -->
+        <img src="images/cap.jpg" alt="Street Snapback">
+        <!-- Example: <img src="images/YOUR-CAP-FILENAME.jpg" alt="Street Snapback"> -->
+      </div>
+      <div class="p-info"><h3>Street Snapback</h3><p>R199.99</p></div>
+    </div>
+
+  </div>
+</section>
+
+<section class="banner">FREE DELIVERY IN NKOMAZI ON ORDERS OVER R700</section>
+<footer><div><strong>Nkomazi Urban Wear</strong><br>© 2026</div><div>info@nkomaziurban.co.za</div></footer>
+<script src="main.js"></script>
+</body>
+</html>
